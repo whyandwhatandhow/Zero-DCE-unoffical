@@ -9,7 +9,7 @@ import model  # 你的 Zero-DCE model.py
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 DCE = model.enhance_net_nopool().to(device)
-DCE.load_state_dict(torch.load("snapshots/Epoch99.pth", map_location=device))
+DCE.load_state_dict(torch.load("snapshots/Epoch99_old.pth", map_location=device))
 DCE.eval()
 
 def enhance(img):
